@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 29, 2025 at 02:46 AM
+-- Generation Time: Dec 01, 2025 at 06:46 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -48,7 +48,7 @@ INSERT INTO `Books` (`isbn`, `title`, `author`, `Edition`, `Year`, `categoryId`,
 ('23U8-923849', 'A guide to nutrition', 'John Thorpe', 2, 1997, 1, 0),
 ('2983-3494', 'Cooking for children', 'Anabelle Sharpe', 1, 2003, 7, 0),
 ('82n8-308', 'computers for idiots', 'Susan O\'Neill', 5, 1998, 4, 0),
-('9823-23984', 'My life in picture', 'Kevin Graham', 8, 2004, 3, 0),
+('9823-23984', 'My life in picture', 'Kevin Graham', 8, 2004, 3, 1),
 ('9823-2403-0', 'DaVinci Code', 'Dan Brown', 1, 2003, 8, 0),
 ('9823-98345', 'How to cook Italian food', 'Jamie Oliver', 2, 2005, 7, 0),
 ('9823-98487', 'Optimising your business', 'Cleo Blair', 1, 2001, 2, 0),
@@ -91,7 +91,8 @@ INSERT INTO `Category` (`categoryId`, `categoryName`) VALUES
 CREATE TABLE `reservedBooks` (
   `username` varchar(50) NOT NULL,
   `isbn` varchar(20) NOT NULL,
-  `reservedDate` date NOT NULL
+  `reservedFromDate` date NOT NULL,
+  `reservedToDate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
