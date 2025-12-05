@@ -67,7 +67,7 @@ if ($formSubmitted) {
     }
 }
 
-/* Simple Pagination (same style as Browse Books) */
+/* Pagination */
 $booksPerPage = 5;
 $totalBooks   = count($books);
 
